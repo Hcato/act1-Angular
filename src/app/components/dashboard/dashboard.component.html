@@ -1,0 +1,56 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+        <mat-card class="dashboard-card">
+          <mat-card-header>
+            <mat-card-title>
+              CardAlumno
+              <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu" xPosition="before">
+                <button mat-menu-item>Expand</button>
+                <button mat-menu-item>Remove</button>
+              </mat-menu>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="dashboard-card-content">
+            <div>
+              <table>
+                @for (item of studentsArray; track $index) {
+                  <tr>
+                    <td>
+                      <a (click)="showName(item.asignature)">{{item.id}}</a>
+                    </td>
+                    <td>
+                      {{item.name}}
+                    </td>
+                    <td>
+                      <button mat-button (click)="deleteStudent(item.id)">borrar</button>
+                    </td>
+                  </tr>
+                }
+              </table>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <div class="tcard2">
+          <mat-card class="card2">
+            <mat-card-header>
+              <mat-card-title>
+                formulario react-ivo
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <form [formGroup]="usuario" (ngSubmit)="add()">
+                <label>id</label>
+              <input type="text" formControlName="id">
+                <label>nombre</label>
+              <input type="text" formControlName="nombre">
+              <label>materia</label>
+              <input type="text" formControlName="materias">
+              <button type="submit">guardar</button>
+              </form>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>

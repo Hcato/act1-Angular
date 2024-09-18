@@ -1,0 +1,20 @@
+<style>
+    h1{
+        margin-left: 25%;
+    }
+    button{
+        margin-left: 45%;
+    }
+    .text{
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+</style>
+<h1 mat-dialog-title>Asignaturas</h1>
+<div mat-dialog-content class="text">
+  <p>{{data.asignature}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cerrar</button>
+</div>

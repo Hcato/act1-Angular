@@ -1,0 +1,48 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: #202020;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  color: white;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.imgs{
+  width: 30px;
+  height: 30px;
+}
+.lists{
+  display: inline-block;
+  text-align: center; 
+  width: 150px;
+  padding: 10px;
+  margin-top: 40px;
+}
+p{
+  color: rgba(255, 255, 255, 0.642);
+  margin-left: 40px;
+}
+.lista{
+  width: 130px;
+}
+.space{
+  height: 80px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+#doki{
+  margin-left: 58px;
+}
+#tuto{
+margin-left: 43px;
+}
